@@ -22,15 +22,15 @@ const Header = ({hHeader}) => {
                     <Link to="/tariffs">Тарифы</Link>
                   </Grid>
                   <Grid item xs={1}>
-                    <Link to="/contactus">Контакты</Link>
+                    <Link to="/contacts">Контакты</Link>
                   </Grid>
                   <Grid item xs={1}>
                     <Link to="/films">Фильмы для тебя</Link>
                   </Grid>
-                  <Grid item xs={1}>
+                  <Grid item xs={4}>
                     <img src={logo} alt="Logo" />
                   </Grid>
-                  <Grid item xs={1}>
+                  <Grid item xs={3}>
                     <div>Бронирование: +7 965 163-50-11</div>
                   </Grid>
                   <Grid></Grid>

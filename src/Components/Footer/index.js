@@ -6,8 +6,7 @@ const Footer = ({hFooter}) => {
     return (
         <nav>
             <ul>
-                <div>
-                    
+                <div>   
                     <div>
                         <li><Link to="/">Главная</Link></li>
                         <li><Link to="/about">О нас</Link></li>
