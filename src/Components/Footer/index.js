@@ -2,14 +2,16 @@ import React from "react";
 import {Link} from "react-router-dom";
 import "./style.js"
 
+//сделать красивые столбики
+
 const Footer = ({hFooter}) => {
-    return (
+    return (       
         <nav>
             <ul>
                 <div>   
                     <div>
                         <li><Link to="/">Главная</Link></li>
-                        <li><Link to="/about">О нас</Link></li>
+                        <li><Link to="/rooms">Залы</Link></li>
                         <li><Link to="/tariffs">Тарифы</Link></li>
                         <li><Link to="/films">Фильмы для тебя</Link></li>
                         <li><Link to="/contacts">Контакты</Link></li>

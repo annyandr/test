@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./style.js"
 
+
 const Body = ({hBody}) => {
 
     const [stateBody, setStateBody] = useState(false)

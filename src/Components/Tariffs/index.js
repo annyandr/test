@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import "./style.js"
 
-const Tariffs = ({hTariffs}) => {
+//сделать красивые столбики и добавить картинок
 
+const Tariffs = ({hTariffs}) => {
     return (
+        
     <div className="tariffs">
         <div>
             <div>Кино-утро</div>

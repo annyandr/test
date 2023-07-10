@@ -8,15 +8,14 @@ import Grid from '@mui/material/Grid';
 const Header = ({hHeader}) => {
     return (
     <nav>
-      
-            <HeaderContainer>            
-                <Grid container spacing={7}>
+            <HeaderContainer>  
 
+                <Grid container spacing={7}>
                   <Grid item xs={1}>
                     <Link to="/">Главная</Link>
                   </Grid>
                   <Grid item xs={1}>
-                    <Link to="/about">О нас</Link>
+                    <Link to="/rooms">Залы</Link>
                   </Grid>
                   <Grid item xs={1}>
                     <Link to="/tariffs">Тарифы</Link>
@@ -33,11 +32,8 @@ const Header = ({hHeader}) => {
                   <Grid item xs={3}>
                     <div>Бронирование: +7 965 163-50-11</div>
                   </Grid>
-                  <Grid></Grid>
-                  
                 </Grid>
-              
-                
+   
             </HeaderContainer>  
     </nav>
     );  
