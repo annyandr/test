@@ -188,30 +188,72 @@ import FormLabel from '@mui/material/FormLabel';
 import Button from '@mui/material/Button';
 
 export default function QuizRadios() {
-  const [value, setValue] = React.useState('');
+  const [value1, setValue1] = React.useState('');
+  const [value2, setValue2] = React.useState('');
+  const [value3, setValue3] = React.useState('');
   const [error, setError] = React.useState(false);
   const [nameText, setNameText] = React.useState('');
+  const [nameText1, setNameText1] = React.useState('');
+  const [nameText2, setNameText2] = React.useState('');
 
   const handleRadioChange = (event) => {
-    setValue(event.target.value);
+    setValue1(event.target.value);
     setNameText(' ');
+    setError(false);
+  };
+  const handleRadioChange1 = (event) => {
+    setValue2(event.target.value);
+    setNameText1(' ');
+    setError(false);
+  };
+  const handleRadioChange2 = (event) => {
+    setValue3(event.target.value);
+    setNameText2(' ');
     setError(false);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (value === 'advantures') {
+    if (value1 === 'advantures') {
         setNameText('Парк Юрского Периода');
         setError(false);
-    } else if (value === 'sci-fi') {
+    } else if (value1 === 'sci-fi') {
         setNameText('Интерстеллар');
         setError(false);
-    } else if (value === 'horror') {
+    } else if (value1 === 'horror') {
         setNameText('Оно');
         setError(false);
     } else {
         setNameText('Please select an option.');
+      setError(true);
+    }
+
+    if (value2 === 'leo') {
+      setNameText1('Волк с Уолл Стрит');
+      setError(false);
+    } else if (value2 === 'joli') {
+      setNameText1('Лара Крофт: Расхитительница гробниц');
+      setError(false);
+    } else if (value2 === 'smit') {
+      setNameText1('Люди в черном');
+      setError(false);
+    } else {
+      setNameText1('Please select an option.');
+      setError(true);
+    }
+
+    if (value3 === 'good') {
+      setNameText2('Форрест Гамп');
+      setError(false);
+    } else if (value3 === 'bad') {
+      setNameText2('Общество мертвых поэтов');
+      setError(false);
+    } else if (value3 === 'other') {
+      setNameText2('Бойцовский клуб');
+      setError(false);
+    } else {
+      setNameText2('Please select an option.');
       setError(true);
     }
   };
@@ -223,7 +265,7 @@ export default function QuizRadios() {
         <RadioGroup
           aria-labelledby="demo-error-radios"
           name="quiz"
-          value={value}
+          value={value1}
           onChange={handleRadioChange}
         >
           <FormControlLabel value="advantures" control={<Radio />} label="Приключения" />
@@ -231,6 +273,39 @@ export default function QuizRadios() {
           <FormControlLabel value="horror" control={<Radio />} label="Хоррор" />
         </RadioGroup>
         <FormHelperText>{nameText}</FormHelperText>
+
+        <p></p>
+
+        <FormLabel id="demo-error-radios1">Какой твой любимый актер/актрисса?</FormLabel>
+        <RadioGroup
+          aria-labelledby="demo-error-radios"
+          name="quiz1"
+          value={value2}
+          onChange={handleRadioChange1}
+        >
+          <FormControlLabel value="leo" control={<Radio />} label="Леонардо Ди Каприо" />
+          <FormControlLabel value="joli" control={<Radio />} label="Анджелина Джоли" />
+          <FormControlLabel value="smit" control={<Radio />} label="Уилл Смит" />
+        </RadioGroup>
+        <FormHelperText>{nameText1}</FormHelperText>
+
+        <p></p>
+
+        <FormLabel id="demo-error-radios2">Какое у тебя настроение?</FormLabel>
+        <RadioGroup
+          aria-labelledby="demo-error-radios"
+          name="quiz2"
+          value={value3}
+          onChange={handleRadioChange2}
+        >
+          <FormControlLabel value="good" control={<Radio />} label="Хорошее" />
+          <FormControlLabel value="bad" control={<Radio />} label="Плохое" />
+          <FormControlLabel value="other" control={<Radio />} label="Нейтральное" />
+        </RadioGroup>
+        <FormHelperText>{nameText2}</FormHelperText>
+
+        <p></p>
+
         <Button sx={{ mt: 1, mr: 1 }} type="submit" variant="outlined">
           Результаты
         </Button>
