@@ -2,11 +2,3 @@
     display: flex;
     justify-content: space-between;
 }
-
-.picture{
-    margin: 50px 0;
-    width: 1000px;
-    height: 600px;
-    background-size: cover;
-    background-position: center center;
-}

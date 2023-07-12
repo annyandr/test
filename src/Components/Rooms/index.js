@@ -7,8 +7,6 @@ import room2 from "./room2.jpg"
 import room3 from "./room3.jpg"
 import room4 from "./room4.jpg"
 
-//добавить картинки и текст
-
 const Rooms = ({hRooms}) => {
 
     return (

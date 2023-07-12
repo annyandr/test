@@ -14,10 +14,8 @@ const Header = ({hHeader}) => {
           <Link to="/rooms"><li>Залы</li></Link>
           <Link to="/tariffs"><li>Тарифы</li></Link>
           <Link to="/films"><li>Фильмы для вас</li></Link>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <img width="300" height="80" src={logo} alt="Logo" />
-          </div>
-          <div>Бронирование: +7 965 163-50-11</div>
+          <img width="300" height="80" src={logo} alt="Logo" />
+          <li>Бронирование: +7 965 163-50-11</li>
         </ul>
       </div>
     </header>
