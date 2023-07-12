@@ -1,3 +1,7 @@
+.footerContainer {
+    width: 200px;
+}
+
 .index{
     display: flex;
     justify-content: space-between;

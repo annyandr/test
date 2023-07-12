@@ -1,12 +1,24 @@
 import React, { useState } from "react";
 import './style.css'
+// import ImageWithText from './lobby.jpg'
 import lobby from './lobby.jpg'
 
 const Tariffs = ({hTariffs}) => {
     return (
         
     <div className="tariffs">
-        <div><img width="1000" className="picture" height="600" src={lobby} alt="Lobby" /></div>
+        <div>
+            <img width="1000" className="picture" height="600" src={lobby} alt="Lobby" />
+        </div>
+
+        {/* <div>
+        <ImageWithText
+            imageUrl="./lobby.jpg"
+            imageAlt="Lobby"
+            text="Тарифы"
+        />
+        </div> */}
+
         <div>
             <div>Кино-утро</div>
             <div>Аренда зала с 06:00 до 12:00</div>

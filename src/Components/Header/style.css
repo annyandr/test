@@ -1,22 +1,28 @@
-.index{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 5px;
-}
-header ul.nav{
-    float: center;
-    list-style: none;
-    display: inline;
-}
-header ul.nav li{
-    float: left;
-    list-style: none;
-    display: inline;
-    margin-left: 25px;
-    cursor: pointer;
-    transition: opacity 500ms ease;
+.headerContainer {
+    background: beige;
+    width: 100%;
 }
 
-header ul.nav li:hover{
-    opacity: 0.5;
+.header {
+    padding-top: 10px;
+    display: flex;
+    padding-left: 28%;
+    background: beige;
+    height: 50px
+}
+
+.link {
+    text-decoration: none;
+    margin-right: 25px;
+}
+
+.booking {
+    margin-top: 4px;
+}
+
+.img {
+    margin-left: 40%;
+    border-radius: 5px;
+    height: 80px;
+    width: 300px;
 }
