@@ -1,184 +1,13 @@
-// import React, { useState } from "react";
-// import "./style.js"
-// import { RadioButton } from 'react-radio-buttons';
-// import Radio from '@mui/material/Radio';
-// import RadioGroup from '@mui/material/RadioGroup';
-// import FormControlLabel from '@mui/material/FormControlLabel';
-//   import FormControl from '@mui/material/FormControl';
-//   import FormLabel from '@mui/material/FormLabel';
-
-// import fight from "./fight.webp"
-// import forest from "./forest.webp"
-// import interstellar from "./interstellar.webp"
-// import it from "./it.webp"
-// import laraKroft from "./laraKroft.webp"
-// import mib from "./mib.webp"
-// import park from "./park.webp"
-// import poets from "./poets.webp"
-// import wolf from "./wolf.webp"
-
-// //разобраться, как сделать переход и составить подборки
-
-// const Films = ({hFilms}) => {
-
-//     const [state1, setState1] = useState(false)
-//     const [state2, setState2] = useState(false)
-//     const [state3, setState3] = useState(false)
-//     const [state4, setState4] = useState(false)
-//     const [state5, setState5] = useState(false)
-//     const [state6, setState6] = useState(false)
-//     const [state7, setState7] = useState(false)
-//     const [state8, setState8] = useState(false)
-//     const [state9, setState9] = useState(false)
-//     const [stateButton, setStateButton] = useState(false)
-
-//     const buttonClick = () => {
-//         console.log(stateButton);
-//         setStateButton(!stateButton);
-//     }
-
-//     const renderSwitch1 = (event, id) => {
-//        console.log(event, id, 'event')
-//     }
-//       const renderSwitch2 = (state2) => {
-//         switch(state2) {
-//             case 'leo':
-//                 return(
-//                     <>
-//                         <div>Волк с Уолл-Стрит</div>
-//                         <img src={wolf} alt="Wolf" />
-//                     </>
-//                 ) ;
-//             case 'djoly':
-//                 return(
-//                     <>
-//                         <div>Лара Крофт: Расхитительница грабниц</div>
-//                         <img src={laraKroft} alt="Lara Kroft" />
-//                     </>
-//                 ) ;
-//             case 'smit':
-//                 return(
-//                     <>
-//                         <div>Люди в черном</div>
-//                         <img src={mib} alt="MIB" />
-//                     </>
-//                 ) ;
-//         }
-//     }
-//     const renderSwitch3 = (state3) => {
-//         switch(state3) {
-//             case 'good':
-//                 return(
-//                     <>
-//                         <div>Форрест Гамп</div>
-//                         <img src={forest} alt="Forest" />
-//                     </>
-//                 ) ;
-//             case 'bad':
-//                 return(
-//                     <>
-//                         <div>Общество мертвых поэтов</div>
-//                         <img src={poets} alt="Poets" />
-//                     </>
-//                 ) ;
-//             case 'netral':
-//                 return(
-//                     <>
-//                         <div>Бойцовский клуб</div>
-//                         <img src={fight} alt="Fight" />
-//                     </>
-//                 ) ;
-//         }
-//     }
-
-//     return (  
-//     <div>
-//         <p>Давай подберем тебе топ самых интересных для тебя фильмов?</p>
-
-//         {/* <div style={{display: "flex"}}> 
-//             <Radio value={state1} onChange={(event) => {setState1(!state1)}}/>
-//             <p> {state1 ? 1 : 2}</p>
-//             <p style={{marginLeft: 5}}>Приключения</p>
-//         </div>
-//         <div style={{display: "flex"}}> 
-//             <Radio value={state2} onChange={(event) => {setState2(!state2)}}/>
-//             <p style={{marginLeft: 5}}>Фантастика</p>
-//         </div>
-//         <div style={{display: "flex"}}> 
-//             <Radio value={state3} onChange={(event) => {setState3(!state3)}}/>
-//             <p style={{marginLeft: 5}}>Хоррор</p>
-//         </div> */}
-//         {/* <FormControl>
-//             <FormLabel id="demo-radio-buttons-group-label">Какой твой любимый жанр?</FormLabel>
-//             <RadioGroup
-//                 aria-labelledby="demo-radio-buttons-group-label"
-//                 defaultValue=""
-//                 name="radio-buttons-group"
-//             >
-//             <FormControlLabel value={state1} control={<Radio />} onChange={(event) => {renderSwitch1(event, 1)}} label="Приключения" />
-//             <FormControlLabel value={state2} control={<Radio />} onChange={(event) => {renderSwitch1(event, 2)}}label="Фантастика" />
-//             <FormControlLabel value={state3} control={<Radio />} onChange={(event) => {renderSwitch1(event, 3)}} label="Хоррор" />
-//             </RadioGroup>
-//         </FormControl>
-
-//         <p></p>
-
-//         <FormControl>
-//             <FormLabel id="demo-radio-buttons-group-label">Какой твой любимый актер?</FormLabel>
-//             <RadioGroup
-//                 aria-labelledby="demo-radio-buttons-group-label"
-//                 defaultValue=""
-//                 name="radio-buttons-group"
-//             >
-//             <FormControlLabel value={state2[0]} control={<Radio />} label="Леонардо Ди Каприо" />
-//             <FormControlLabel value={state2[1]} control={<Radio />} label="Анджелина Джоли" />
-//             <FormControlLabel value={state2[2]} control={<Radio />} label="Уилл Смит" />
-//             </RadioGroup>
-//         </FormControl>
-
-//         <p></p>
-
-//         <FormControl>
-//             <FormLabel id="demo-radio-buttons-group-label">Какое у тебя сейчас настроение?</FormLabel>
-//             <RadioGroup
-//                 aria-labelledby="demo-radio-buttons-group-label"
-//                 defaultValue=""
-//                 name="radio-buttons-group"
-//             >
-//             <FormControlLabel value={state3[0]} control={<Radio />} label="Хорошее" />
-//             <FormControlLabel value={state3[1]} control={<Radio />} label="Плохое" />
-//             <FormControlLabel value={state3[2]} control={<Radio />} label="Нейтральное" />
-//             </RadioGroup>
-//         </FormControl> */}
-        
-//         <p></p>
-
-//         {stateButton && <p> {hFilms} </p>}
-//         <button className="button" onClick={buttonClick}> 
-//             Результаты 
-//         </button>
-
-//         <div>
-//             {renderSwitch1(state1)}
-//         </div>
-//         <div>
-//             {renderSwitch2(state2)}
-//         </div>
-//         <div>
-//             {renderSwitch3(state3)}
-//         </div>
-        
-//     </div>
-//     );
-// };
-
-// export default Films;
-
-
-
-
-
 import * as React from 'react';
+import parkImg from "./park.webp";
+import fightImg from "./fight.webp";
+import forestImg from "./forest.webp";
+import interstellarImg from "./interstellar.webp";
+import itImg from "./it.webp";
+import laraKroftImg from "./laraKroft.webp";
+import mibImg from "./mib.webp";
+import poetsImg from "./poets.webp";
+import wolfImg from "./wolf.webp";
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -195,20 +24,32 @@ export default function QuizRadios() {
   const [nameText, setNameText] = React.useState('');
   const [nameText1, setNameText1] = React.useState('');
   const [nameText2, setNameText2] = React.useState('');
+  const [aboutText, setAboutText] = React.useState('');
+  const [aboutText1, setAboutText1] = React.useState('');
+  const [aboutText2, setAboutText2] = React.useState('');
+  const [imgSrc, setImgSrc] = React.useState('');
+  const [imgSrc1, setImgSrc1] = React.useState('');
+  const [imgSrc2, setImgSrc2] = React.useState('');
 
   const handleRadioChange = (event) => {
     setValue1(event.target.value);
     setNameText(' ');
+    setImgSrc(' ');
+    setAboutText(' ');
     setError(false);
   };
   const handleRadioChange1 = (event) => {
     setValue2(event.target.value);
     setNameText1(' ');
+    setImgSrc1(' ');
+    setAboutText1(' ');
     setError(false);
   };
   const handleRadioChange2 = (event) => {
     setValue3(event.target.value);
     setNameText2(' ');
+    setImgSrc2(' ');
+    setAboutText2(' ');
     setError(false);
   };
 
@@ -217,12 +58,18 @@ export default function QuizRadios() {
 
     if (value1 === 'advantures') {
         setNameText('Парк Юрского Периода');
+        setImgSrc(parkImg);
+        setAboutText('Из-за аварии в реликтовом парке динозавры оказываются на воле. Фантастика Стивена Спилберга с тремя «Оскарами»');
         setError(false);
     } else if (value1 === 'sci-fi') {
         setNameText('Интерстеллар');
+        setImgSrc(interstellarImg);
+        setAboutText('Когда вымирание растений приводят человечество к продовольственному кризису, коллектив исследователей и учёных отправляется сквозь червоточину в путешествие, чтобы найти планету с подходящими для человечества условиями');
         setError(false);
     } else if (value1 === 'horror') {
         setNameText('Оно');
+        setImgSrc(itImg);
+        setAboutText('В городке Дерри начинают пропадать дети, несколько ребят сталкиваются со своими величайшими страхами — не только с группой школьных хулиганов, но со злобным клоуном Пеннивайзом');
         setError(false);
     } else {
         setNameText('Please select an option.');
@@ -231,12 +78,18 @@ export default function QuizRadios() {
 
     if (value2 === 'leo') {
       setNameText1('Волк с Уолл Стрит');
+      setImgSrc1(wolfImg);
+      setAboutText1('Восхождение циника-гедониста на бизнес-олимп 1980-х. Блистательный тандем Леонардо ДиКаприо и Мартина Скорсезе');
       setError(false);
     } else if (value2 === 'joli') {
       setNameText1('Лара Крофт: Расхитительница гробниц');
+      setImgSrc1(laraKroftImg);
+      setAboutText1('Лара Крофт владеет всеми видами рукопашного боя, стреляет из любых видов оружия и способна выжить в самых экстремальных условиях. Однажды она обнаруживает вход в секретную комнату, где находятся старинные часы с удивительным устройством внутри');
       setError(false);
     } else if (value2 === 'smit') {
       setNameText1('Люди в черном');
+      setImgSrc1(mibImg);
+      setAboutText1('Земля кишит пришельцами, за которыми глаз да глаз. Уилл Смит и Томми Ли Джонс в ролях следящих за порядком');
       setError(false);
     } else {
       setNameText1('Please select an option.');
@@ -245,12 +98,18 @@ export default function QuizRadios() {
 
     if (value3 === 'good') {
       setNameText2('Форрест Гамп');
+      setImgSrc2(forestImg);
+      setAboutText2('Полувековая история США глазами чудака из Алабамы. Абсолютная классика Роберта Земекиса с Томом Хэнксом');
       setError(false);
     } else if (value3 === 'bad') {
       setNameText2('Общество мертвых поэтов');
+      setImgSrc2(poetsImg);
+      setAboutText2('Джон Китинг — новый преподаватель английской словесности в консервативном американском колледже. Однажды он посвящает своих подопечных в тайну Общества мёртвых поэтов. С этого момента каждый из учеников старается обрести свой собственный голос в безликом хоре');
       setError(false);
     } else if (value3 === 'other') {
       setNameText2('Бойцовский клуб');
+      setImgSrc2(fightImg);
+      setAboutText2('Страховой работник разрушает рутину своей благополучной жизни. Культовая драма по книге Чака Паланика');
       setError(false);
     } else {
       setNameText2('Please select an option.');
@@ -272,7 +131,7 @@ export default function QuizRadios() {
           <FormControlLabel value="sci-fi" control={<Radio />} label="Фантастика" />
           <FormControlLabel value="horror" control={<Radio />} label="Хоррор" />
         </RadioGroup>
-        <FormHelperText>{nameText}</FormHelperText>
+        <FormHelperText><img src ={imgSrc}></img><p></p>{nameText}<p></p>{aboutText}</FormHelperText>
 
         <p></p>
 
@@ -287,7 +146,7 @@ export default function QuizRadios() {
           <FormControlLabel value="joli" control={<Radio />} label="Анджелина Джоли" />
           <FormControlLabel value="smit" control={<Radio />} label="Уилл Смит" />
         </RadioGroup>
-        <FormHelperText>{nameText1}</FormHelperText>
+        <FormHelperText><img src ={imgSrc1}></img><p></p>{nameText1}<p></p>{aboutText1}</FormHelperText>
 
         <p></p>
 
@@ -302,7 +161,7 @@ export default function QuizRadios() {
           <FormControlLabel value="bad" control={<Radio />} label="Плохое" />
           <FormControlLabel value="other" control={<Radio />} label="Нейтральное" />
         </RadioGroup>
-        <FormHelperText>{nameText2}</FormHelperText>
+        <FormHelperText><img src ={imgSrc2}></img><p></p>{nameText2}<p></p>{aboutText2}</FormHelperText>
 
         <p></p>
 

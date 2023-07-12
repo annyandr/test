@@ -1,28 +1,28 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import "./style.js"
-
-//сделать красивые столбики
+import "./style.css"
 
 const Footer = ({hFooter}) => {
     return (       
-        <nav>
-            <ul>
-                <div>   
-                    <div>
-                        <li><Link to="/">Главная</Link></li>
-                        <li><Link to="/rooms">Залы</Link></li>
-                        <li><Link to="/tariffs">Тарифы</Link></li>
-                        <li><Link to="/films">Фильмы для тебя</Link></li>
-                        <li><Link to="/contacts">Контакты</Link></li>
-                    </div>
-                    <div>
-                        <div>Бронирование: +7 965 163-50-11</div>
-                        <div>E-mail: ask@kinoroomloft.ru</div>
-                    </div>
-                </div>
-            </ul>
-        </nav>
+    <>
+    <footer>
+      <div>
+        <ul className='nav'>
+          <Link to="/"><li>Главная</li></Link>
+          <Link to="/rooms"><li>Залы</li></Link>
+          <Link to="/tariffs"><li>Тарифы</li></Link>
+          <Link to="/films"><li>Фильмы для вас</li></Link>
+        </ul>
+        <ul className="contacts">
+            <p>Наши Контакты:</p>
+            <div>Бронирование: +7 965 163-50-11</div>
+            <div>Ваши предложения: ask@kinoroomloft.ru</div>
+            <div>Адрес: г. Москва, Страстной бульвар 11</div>
+            <div>Режим работы: круглосуточно</div>
+        </ul>
+      </div>
+    </footer>
+    </>
     );
 };
 

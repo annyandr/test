@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import "./style.js"
-
-//сделать красивые столбики и добавить картинок
+import './style.css'
+import lobby from './lobby.jpg'
 
 const Tariffs = ({hTariffs}) => {
     return (
         
     <div className="tariffs">
+        <div><img width="1000" className="picture" height="600" src={lobby} alt="Lobby" /></div>
         <div>
             <div>Кино-утро</div>
             <div>Аренда зала с 06:00 до 12:00</div>
@@ -41,7 +41,6 @@ const Tariffs = ({hTariffs}) => {
         </div>
         <p></p>
         <div>
-            <div>Продление на час</div>
             <div>Продление аренды кинозала на 1 час</div>
             <p></p>
             <div>1000 руб (с 06:00 до 12:00)</div>

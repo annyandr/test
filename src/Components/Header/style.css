@@ -1,0 +1,22 @@
+.index{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 5px;
+}
+header ul.nav{
+    float: center;
+    list-style: none;
+    display: inline;
+}
+header ul.nav li{
+    float: left;
+    list-style: none;
+    display: inline;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+}
+
+header ul.nav li:hover{
+    opacity: 0.5;
+}

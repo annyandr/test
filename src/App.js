@@ -3,11 +3,10 @@ import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Tariffs from "./Components/Tariffs";
-import Contacts from "./Components/Contacts";
 import Films from "./Components/Films";
 import Rooms from "./Components/Rooms";
 
-import styled from "styled-components";
+import index from './index.css'
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,15 +18,11 @@ import {
 
 const App = () => {
   const hHeade = "Заголовок";
-  const hBod = "Тело";
   const hFoote = "Нижний абзац";
   const hHome = "Главная";
-  const hAboutUs = "О нас";
   const hTariffs = "Тарифы";
-  const hContacts = "Контакты";
   const hFilms = "Фильмы";
   const hRooms = "Залы";
-
 
   return (
     <>
@@ -36,13 +31,11 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={<Home/>} />
           <Route path="/rooms" element={<Rooms/>} />
-          <Route path="/tariffs" element={<Tariffs/>} />  
-          <Route path="/contacts" element={<Contacts/>} />
+          <Route path="/tariffs" element={<Tariffs/>} />
           <Route path="/films" element={<Films/>} />
         </Routes>
         <Footer hFooter={hFoote}/> 
-      </Router>
-      
+      </Router>      
     </>
   );
 };

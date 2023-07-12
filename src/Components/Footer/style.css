@@ -1,0 +1,21 @@
+.index{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 5px;
+}
+footer ul.contacts{
+    float: right;
+    text-align: right;
+    list-style: none;
+}
+footer ul.nav li{
+    float: left;
+    list-style: none;
+    margin-left: 25px;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+}
+
+footer ul.nav li:hover{
+    opacity: 0.5;
+}
