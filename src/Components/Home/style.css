@@ -1,5 +1,15 @@
-.index{
+.text {
+    margin-left: 15px;
+}
+
+.title {
+    font-weight: 900
+}
+
+.containerVideo {
+    margin-top: 30px;
     display: flex;
-    justify-content: space-between;
-    margin: 10px 10px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 180px;
 }

@@ -1,0 +1,20 @@
+.blockRooms {
+    display: flex;
+    margin-top: 20px;
+}
+
+.blockDescriptionRooms {
+    margin-left: 10px;
+}
+
+.imgRooms {
+    width: 750px;
+    height: 500px;
+    border-radius: 30px;
+}
+
+.containerRooms {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

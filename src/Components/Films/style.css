@@ -3,3 +3,12 @@
     background-color: cadetblue;
     height: 100px;
 }
+.helloText{
+    display: flex;
+    align-items: flex-start;
+    margin-left: 40px;
+}
+
+.imageFilmTest {
+    border-radius: 10px;
+}

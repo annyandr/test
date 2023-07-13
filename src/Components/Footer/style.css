@@ -1,9 +1,16 @@
+.footerContainer {
+    padding: 10px;
+    background: beige;
+    height: 190px;
+}
+
 .index{
     display: flex;
     justify-content: space-between;
     margin: 10px 5px;
 }
 footer ul.contacts{
+    margin-right: 40px;
     float: right;
     text-align: right;
     list-style: none;

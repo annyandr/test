@@ -1,4 +1,37 @@
-.index{
+.titleTariffs {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.picture{
+    width: 750px;
+    height: 500px;
+    border-radius: 30px;
+    margin-top: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+}
+.imgIcon{
+    width: 90px;
+    height: 90px;
+    top:0;
+}
+.blockTime {
+    display: flex;
+    margin-top: 30px;
+    margin-left: 35%;
+}
+
+.blockPackets {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 20%;
+}
+
+.blockDescriptionTariffs {
+    margin-left: 10px;
 }
